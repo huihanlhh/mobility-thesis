@@ -1,0 +1,311 @@
+PS C:\Users\Huihan Li\Documents\Wellesley Courses\Fall 2018\Christine Lab\Geolife Trajectories 1.3\SeriousStuff\Scripts> python .\findPOIwithTime.py
+Minimum time period                    :  600 s
+Eps Radius of POI                      :  0.1 km
+20110803091252.csv
+Total num of POI jumped: 0
+Runtime: 0:00:00
+Total Num of POI: 0
+Runtime: 0:00:00.233432
+20110807090603.csv
+Total num of POI jumped: 0
+Runtime: 0:00:00.001994
+Total Num of POI: 0
+Runtime: 0:00:00.285195
+20110808215103.csv
+Total num of POI jumped: 0
+Runtime: 0:00:00.007983
+Total Num of POI: 0
+Runtime: 0:00:00.945451
+20110809092747.csv
+Total num of POI jumped: 1
+Runtime: 0:00:00.003979
+Length: 16 Accuracy: 1.0 Starting from Day 2 17:31:14
+No. of points in POI: 27 Starting from: Day 2 17:30:19
+Total Num of POI: 1
+Runtime: 0:00:00.141637
+20110809094530.csv
+Total num of POI jumped: 0
+Runtime: 0:00:00
+Total Num of POI: 0
+Runtime: 0:00:00.154570
+20110809220352.csv
+Total num of POI jumped: 27
+Runtime: 0:00:00.670205
+Length: 60 Accuracy: 1.0 Starting from Day 3 06:33:34
+Length: 141 Accuracy: 1.0 Starting from Day 3 06:52:07
+Length: 59 Accuracy: 1.0 Starting from Day 3 07:02:12
+Length: 140 Accuracy: 1.0 Starting from Day 3 07:27:46
+Length: 129 Accuracy: 1.0 Starting from Day 3 07:37:53
+Length: 41 Accuracy: 1.0 Starting from Day 3 07:49:56
+Length: 138 Accuracy: 1.0 Starting from Day 3 08:03:56
+Length: 45 Accuracy: 1.0 Starting from Day 3 08:14:01
+Length: 140 Accuracy: 1.0 Starting from Day 3 08:27:59
+Length: 58 Accuracy: 1.0 Starting from Day 3 08:38:06
+Length: 69 Accuracy: 1.0 Starting from Day 3 08:50:45
+Length: 73 Accuracy: 1.0 Starting from Day 3 09:00:50
+Length: 138 Accuracy: 1.0 Starting from Day 3 09:29:41
+Length: 135 Accuracy: 1.0 Starting from Day 3 09:39:46
+Length: 53 Accuracy: 1.0 Starting from Day 3 09:49:51
+Length: 121 Accuracy: 1.0 Starting from Day 3 10:02:40
+Length: 137 Accuracy: 1.0 Starting from Day 3 10:23:05
+Length: 70 Accuracy: 1.0 Starting from Day 3 10:33:10
+Length: 63 Accuracy: 1.0 Starting from Day 3 10:43:12
+Length: 94 Accuracy: 1.0 Starting from Day 3 10:54:12
+Length: 137 Accuracy: 1.0 Starting from Day 3 11:16:06
+Length: 87 Accuracy: 1.0 Starting from Day 3 11:26:14
+Length: 141 Accuracy: 1.0 Starting from Day 3 11:36:19
+Length: 81 Accuracy: 1.0 Starting from Day 3 11:49:11
+Length: 54 Accuracy: 1.0 Starting from Day 3 11:59:20
+Length: 139 Accuracy: 1.0 Starting from Day 3 12:27:04
+Length: 144 Accuracy: 1.0 Starting from Day 3 12:37:07
+No. of points in POI: 369 Starting from: Day 3 06:33:44
+No. of points in POI: 380 Starting from: Day 3 07:35:54
+No. of points in POI: 1514 Starting from: Day 3 08:27:54
+No. of points in POI: 105 Starting from: Day 3 11:46:08
+No. of points in POI: 354 Starting from: Day 3 12:00:55
+Total Num of POI: 5
+Runtime: 0:02:57.496603
+20110824133934.csv
+Total num of POI jumped: 42
+Runtime: 0:00:01.173866
+Length: 35 Accuracy: 1.0 Starting from Day 3 22:18:14
+Length: 141 Accuracy: 1.0 Starting from Day 3 22:36:15
+Length: 138 Accuracy: 0.9710144927536232 Starting from Day 3 22:46:20
+Length: 85 Accuracy: 1.0 Starting from Day 3 22:56:29
+Length: 102 Accuracy: 1.0 Starting from Day 3 23:06:37
+Length: 132 Accuracy: 1.0 Starting from Day 3 23:16:45
+Length: 98 Accuracy: -0.15306122448979598 Starting from Day 3 23:37:20
+Length: 67 Accuracy: 1.0 Starting from Day 3 23:47:23
+Length: 43 Accuracy: 1.0 Starting from Day 3 23:57:28
+Length: 137 Accuracy: 1.0 Starting from Day 4 00:50:31
+Length: 144 Accuracy: 1.0 Starting from Day 4 01:00:36
+Length: 140 Accuracy: 1.0 Starting from Day 4 01:10:45
+Length: 133 Accuracy: 1.0 Starting from Day 4 01:20:51
+Length: 146 Accuracy: 1.0 Starting from Day 4 01:30:56
+Length: 2 Accuracy: 1.0 Starting from Day 4 01:41:04
+Length: 133 Accuracy: 0.5864661654135339 Starting from Day 4 02:07:10
+Length: 141 Accuracy: 1.0 Starting from Day 4 02:17:15
+Length: 113 Accuracy: 1.0 Starting from Day 4 02:27:24
+Length: 96 Accuracy: -1.4791666666666665 Starting from Day 4 02:40:24
+Length: 71 Accuracy: 1.0 Starting from Day 4 02:53:15
+Length: 10 Accuracy: 1.0 Starting from Day 4 03:03:20
+Length: 133 Accuracy: 1.0 Starting from Day 4 03:34:34
+Length: 141 Accuracy: 1.0 Starting from Day 4 03:44:38
+Length: 138 Accuracy: 1.0 Starting from Day 4 03:54:43
+Length: 67 Accuracy: 1.0 Starting from Day 4 04:04:48
+Length: 131 Accuracy: 1.0 Starting from Day 4 04:18:57
+Length: 98 Accuracy: 1.0 Starting from Day 4 04:33:46
+Length: 76 Accuracy: 1.0 Starting from Day 4 04:43:53
+Length: 78 Accuracy: 1.0 Starting from Day 4 04:53:58
+Length: 89 Accuracy: 1.0 Starting from Day 4 05:04:03
+Length: 117 Accuracy: 1.0 Starting from Day 4 05:14:12
+Length: 134 Accuracy: 1.0 Starting from Day 4 05:35:41
+Length: 120 Accuracy: 1.0 Starting from Day 4 05:45:50
+Length: 96 Accuracy: 1.0 Starting from Day 4 05:57:54
+Length: 96 Accuracy: 1.0 Starting from Day 4 06:07:59
+Length: 105 Accuracy: 1.0 Starting from Day 4 06:22:30
+Length: 142 Accuracy: 1.0 Starting from Day 4 06:53:40
+Length: 142 Accuracy: 1.0 Starting from Day 4 07:03:45
+Length: 66 Accuracy: 1.0 Starting from Day 4 07:13:50
+Length: 65 Accuracy: 1.0 Starting from Day 4 07:23:59
+Length: 140 Accuracy: 1.0 Starting from Day 4 07:42:57
+Length: 63 Accuracy: 1.0 Starting from Day 4 07:53:02
+No. of points in POI: 298 Starting from: Day 3 22:16:59
+No. of points in POI: 346 Starting from: Day 3 22:53:41
+No. of points in POI: 953 Starting from: Day 3 23:40:08
+No. of points in POI: 334 Starting from: Day 4 02:16:05
+No. of points in POI: 604 Starting from: Day 4 02:51:45
+No. of points in POI: 820 Starting from: Day 4 04:20:43
+No. of points in POI: 159 Starting from: Day 4 05:57:57
+No. of points in POI: 771 Starting from: Day 4 06:12:50
+Total Num of POI: 8
+Runtime: 0:08:53.385089
+20110827140757.csv
+Total num of POI jumped: 2
+Runtime: 0:00:00.049848
+Length: 68 Accuracy: 1.0 Starting from Day 6 22:28:31
+Length: 90 Accuracy: 1.0 Starting from Day 6 22:38:36
+No. of points in POI: 73 Starting from: Day 6 22:28:34
+No. of points in POI: 192 Starting from: Day 6 22:42:42
+Total Num of POI: 2
+Runtime: 0:00:03.357073
+20110828085951.csv
+Total num of POI jumped: 0
+Runtime: 0:00:00.000998
+Total Num of POI: 0
+Runtime: 0:00:00.359046
+20110828164033.csv
+Total num of POI jumped: 35
+Runtime: 0:00:01.017238
+Length: 6 Accuracy: 1.0 Starting from Day 1 00:56:30
+Length: 7 Accuracy: 1.0 Starting from Day 1 01:31:24
+Length: 136 Accuracy: 1.0 Starting from Day 1 01:59:23
+Length: 134 Accuracy: 1.0 Starting from Day 1 02:09:28
+Length: 110 Accuracy: 1.0 Starting from Day 1 02:19:31
+Length: 141 Accuracy: 1.0 Starting from Day 1 02:49:30
+Length: 134 Accuracy: 1.0 Starting from Day 1 02:59:38
+Length: 44 Accuracy: 1.0 Starting from Day 1 03:09:45
+Length: 75 Accuracy: 1.0 Starting from Day 1 03:19:50
+Length: 141 Accuracy: 1.0 Starting from Day 1 03:57:18
+Length: 140 Accuracy: 1.0 Starting from Day 1 04:07:23
+Length: 141 Accuracy: 1.0 Starting from Day 1 04:17:28
+Length: 16 Accuracy: 1.0 Starting from Day 1 04:27:33
+Length: 140 Accuracy: 1.0 Starting from Day 1 05:15:33
+Length: 144 Accuracy: 1.0 Starting from Day 1 05:25:38
+Length: 138 Accuracy: 1.0 Starting from Day 1 05:35:43
+Length: 135 Accuracy: 1.0 Starting from Day 1 05:45:48
+Length: 88 Accuracy: 1.0 Starting from Day 1 05:55:56
+Length: 132 Accuracy: 1.0 Starting from Day 1 06:21:21
+Length: 131 Accuracy: 1.0 Starting from Day 1 06:31:26
+Length: 98 Accuracy: 1.0 Starting from Day 1 06:46:06
+Length: 101 Accuracy: 1.0 Starting from Day 1 07:00:43
+Length: 136 Accuracy: 1.0 Starting from Day 1 07:49:03
+Length: 129 Accuracy: 1.0 Starting from Day 1 07:59:08
+Length: 139 Accuracy: 1.0 Starting from Day 1 08:09:13
+Length: 108 Accuracy: 1.0 Starting from Day 1 08:19:20
+Length: 100 Accuracy: 1.0 Starting from Day 1 08:33:13
+Length: 58 Accuracy: 1.0 Starting from Day 1 08:44:23
+Length: 104 Accuracy: 1.0 Starting from Day 1 08:56:03
+Length: 53 Accuracy: 1.0 Starting from Day 1 09:07:12
+Length: 125 Accuracy: 1.0 Starting from Day 1 09:20:16
+Length: 139 Accuracy: 1.0 Starting from Day 1 09:56:11
+Length: 137 Accuracy: 1.0 Starting from Day 1 10:06:16
+Length: 110 Accuracy: 0.4636363636363636 Starting from Day 1 10:16:23
+Length: 140 Accuracy: 1.0 Starting from Day 1 10:28:24
+No. of points in POI: 390 Starting from: Day 1 00:56:49
+No. of points in POI: 3204 Starting from: Day 1 02:49:35
+Total Num of POI: 2
+Runtime: 0:11:23.311568
+20110830140828.csv
+Total num of POI jumped: 0
+Runtime: 0:00:00.001998
+No. of points in POI: 63 Starting from: Day 2 22:33:25
+Total Num of POI: 1
+Runtime: 0:00:00.515665
+20110902093233.csv
+Total num of POI jumped: 83
+Runtime: 0:00:02.531239
+Length: 82 Accuracy: 1.0 Starting from Day 5 18:05:28
+Length: 42 Accuracy: 1.0 Starting from Day 5 18:15:37
+Length: 140 Accuracy: 1.0 Starting from Day 5 19:14:07
+Length: 135 Accuracy: 1.0 Starting from Day 5 19:24:12
+Length: 139 Accuracy: 1.0 Starting from Day 5 19:34:17
+Length: 139 Accuracy: 1.0 Starting from Day 5 19:44:20
+Length: 138 Accuracy: 1.0 Starting from Day 5 19:54:25
+Length: 84 Accuracy: 1.0 Starting from Day 5 20:04:30
+Length: 130 Accuracy: 1.0 Starting from Day 5 20:36:49
+Length: 146 Accuracy: 1.0 Starting from Day 5 20:46:58
+Length: 71 Accuracy: 1.0 Starting from Day 5 20:57:03
+Length: 137 Accuracy: 1.0 Starting from Day 5 21:17:21
+Length: 60 Accuracy: 1.0 Starting from Day 5 21:27:26
+Length: 141 Accuracy: 1.0 Starting from Day 5 21:58:46
+Length: 131 Accuracy: 1.0 Starting from Day 5 22:08:51
+Length: 40 Accuracy: 1.0 Starting from Day 5 22:33:24
+Length: 63 Accuracy: 1.0 Starting from Day 5 22:43:29
+Length: 102 Accuracy: 0.9705882352941176 Starting from Day 5 22:53:34
+Length: 82 Accuracy: 1.0 Starting from Day 5 23:03:40
+Length: 48 Accuracy: 1.0 Starting from Day 5 23:13:48
+Length: 136 Accuracy: 1.0 Starting from Day 5 23:44:43
+Length: 145 Accuracy: 1.0 Starting from Day 5 23:54:48
+Length: 87 Accuracy: 1.0 Starting from Day 6 00:04:50
+Length: 143 Accuracy: 1.0 Starting from Day 6 00:26:03
+Length: 65 Accuracy: 1.0 Starting from Day 6 00:36:12
+Length: 127 Accuracy: 1.0 Starting from Day 6 00:57:35
+Length: 97 Accuracy: 1.0 Starting from Day 6 01:07:43
+Length: 130 Accuracy: 1.0 Starting from Day 6 01:34:58
+Length: 140 Accuracy: 1.0 Starting from Day 6 01:45:05
+Length: 34 Accuracy: 1.0 Starting from Day 6 01:55:12
+Length: 139 Accuracy: 1.0 Starting from Day 6 02:15:20
+Length: 105 Accuracy: 1.0 Starting from Day 6 02:25:28
+Length: 110 Accuracy: 1.0 Starting from Day 6 02:41:27
+Length: 26 Accuracy: 1.0 Starting from Day 6 03:07:29
+Length: 141 Accuracy: 1.0 Starting from Day 6 03:34:58
+Length: 139 Accuracy: 1.0 Starting from Day 6 03:45:07
+Length: 76 Accuracy: 1.0 Starting from Day 6 03:55:12
+Length: 146 Accuracy: 1.0 Starting from Day 6 04:32:37
+Length: 141 Accuracy: 1.0 Starting from Day 6 04:42:42
+Length: 134 Accuracy: 1.0 Starting from Day 6 04:52:46
+Length: 98 Accuracy: 1.0 Starting from Day 6 05:08:21
+Length: 37 Accuracy: 1.0 Starting from Day 6 05:18:25
+Length: 140 Accuracy: 1.0 Starting from Day 6 05:37:14
+Length: 85 Accuracy: 1.0 Starting from Day 6 05:47:19
+Length: 130 Accuracy: 1.0 Starting from Day 6 07:44:44
+Length: 145 Accuracy: 1.0 Starting from Day 6 07:54:47
+Length: 133 Accuracy: 1.0 Starting from Day 6 08:04:52
+Length: 129 Accuracy: 1.0 Starting from Day 6 08:15:01
+Length: 123 Accuracy: 1.0 Starting from Day 6 08:25:06
+Length: 131 Accuracy: 1.0 Starting from Day 6 08:35:11
+Length: 129 Accuracy: 1.0 Starting from Day 6 08:45:16
+Length: 129 Accuracy: 1.0 Starting from Day 6 08:55:21
+Length: 146 Accuracy: 1.0 Starting from Day 6 09:05:26
+Length: 142 Accuracy: 1.0 Starting from Day 6 09:15:29
+Length: 90 Accuracy: 1.0 Starting from Day 6 09:25:36
+Length: 136 Accuracy: 1.0 Starting from Day 6 09:57:01
+Length: 137 Accuracy: 1.0 Starting from Day 6 10:07:05
+Length: 97 Accuracy: 1.0 Starting from Day 6 10:20:51
+Length: 101 Accuracy: 1.0 Starting from Day 6 10:30:56
+Length: 15 Accuracy: 1.0 Starting from Day 6 10:41:05
+Length: 143 Accuracy: 1.0 Starting from Day 6 13:22:39
+Length: 143 Accuracy: 1.0 Starting from Day 6 13:32:48
+Length: 138 Accuracy: 1.0 Starting from Day 6 13:42:56
+Length: 141 Accuracy: 1.0 Starting from Day 6 13:53:01
+Length: 142 Accuracy: 1.0 Starting from Day 6 14:03:06
+Length: 139 Accuracy: 1.0 Starting from Day 6 14:13:09
+Length: 139 Accuracy: 1.0 Starting from Day 6 14:23:14
+Length: 145 Accuracy: 1.0 Starting from Day 6 14:33:21
+Length: 129 Accuracy: 1.0 Starting from Day 6 14:43:26
+Length: 137 Accuracy: 1.0 Starting from Day 6 14:53:33
+Length: 137 Accuracy: 1.0 Starting from Day 6 15:03:38
+Length: 141 Accuracy: 1.0 Starting from Day 6 15:13:43
+Length: 133 Accuracy: 0.8120300751879699 Starting from Day 6 15:23:50
+Length: 139 Accuracy: 0.3597122302158273 Starting from Day 6 15:33:57
+Length: 49 Accuracy: 1.0 Starting from Day 6 15:55:25
+Length: 72 Accuracy: 1.0 Starting from Day 6 16:05:33
+Length: 70 Accuracy: 1.0 Starting from Day 6 16:25:26
+Length: 142 Accuracy: 0.9225352112676056 Starting from Day 6 16:37:14
+Length: 132 Accuracy: 1.0 Starting from Day 6 16:52:09
+Length: 104 Accuracy: 1.0 Starting from Day 6 17:02:14
+Length: 97 Accuracy: 1.0 Starting from Day 6 17:14:03
+Length: 49 Accuracy: 1.0 Starting from Day 6 17:24:06
+Length: 57 Accuracy: 1.0 Starting from Day 6 17:39:31
+No. of points in POI: 1752 Starting from: Day 5 18:00:18
+No. of points in POI: 106 Starting from: Day 5 22:33:12
+No. of points in POI: 716 Starting from: Day 5 23:03:05
+No. of points in POI: 533 Starting from: Day 6 00:57:43
+No. of points in POI: 451 Starting from: Day 6 02:15:42
+No. of points in POI: 2636 Starting from: Day 6 03:06:24
+No. of points in POI: 164 Starting from: Day 6 10:08:02
+No. of points in POI: 215 Starting from: Day 6 10:20:51
+No. of points in POI: 975 Starting from: Day 6 13:22:47
+No. of points in POI: 746 Starting from: Day 6 14:32:41
+No. of points in POI: 112 Starting from: Day 6 16:04:18
+No. of points in POI: 108 Starting from: Day 6 16:22:57
+No. of points in POI: 370 Starting from: Day 6 16:51:24
+No. of points in POI: 107 Starting from: Day 6 17:26:08
+Total Num of POI: 14
+Runtime: 7:22:48.510417
+20110930085058.csv
+Total num of POI jumped: 12
+Runtime: 0:00:00.371008
+Length: 89 Accuracy: 1.0 Starting from Day 5 18:11:17
+Length: 46 Accuracy: 1.0 Starting from Day 5 18:33:43
+Length: 107 Accuracy: 1.0 Starting from Day 5 18:43:46
+Length: 106 Accuracy: 1.0 Starting from Day 5 18:59:28
+Length: 128 Accuracy: 1.0 Starting from Day 5 19:28:18
+Length: 135 Accuracy: 1.0 Starting from Day 5 19:38:21
+Length: 79 Accuracy: 1.0 Starting from Day 5 19:48:23
+Length: 130 Accuracy: 1.0 Starting from Day 5 20:06:49
+Length: 7 Accuracy: 1.0 Starting from Day 5 20:16:57
+Length: 115 Accuracy: 1.0 Starting from Day 5 20:54:13
+Length: 39 Accuracy: 1.0 Starting from Day 5 21:14:25
+Length: 136 Accuracy: 1.0 Starting from Day 5 21:33:53
+No. of points in POI: 120 Starting from: Day 5 18:02:15
+No. of points in POI: 98 Starting from: Day 5 18:13:16
+No. of points in POI: 117 Starting from: Day 5 18:33:48
+No. of points in POI: 734 Starting from: Day 5 18:49:05
+No. of points in POI: 221 Starting from: Day 5 20:52:18
+No. of points in POI: 256 Starting from: Day 5 21:11:55
+Total Num of POI: 6
+Runtime: 0:01:42.462896
+POIs of one person: 39
+POIs of one person jumped: 202
