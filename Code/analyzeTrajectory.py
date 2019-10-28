@@ -2,6 +2,7 @@ from bjPOI import read_csv
 from datetime import datetime
 from datetime import date as dt
 import numpy as np
+import matplotlib.pyplot as plt
 import math
 
 MATCHING_DISTANCE = 0.1
@@ -56,25 +57,10 @@ def trajectory_by_day(fname):
 			last_date = date
 			last_day = day
 
-		# if (not start):
-		# 	if day == dayofweek:
-		# 		one_trajectory = [data_tup]
-		# 		trajectories.append(one_trajectory)
-		# 		date = dt.fromtimestamp(data_tup[2])
-		# 		last_date = date
-		# 		start = True
-		# else:
-		# 	if day == dayofweek:
-		# 		date = dt.fromtimestamp(data_tup[2])
-		# 		if date == last_date:
-		# 			trajectories[-1].append(data_tup)
-		# 	else:
-		# 		start = False
 	return trajectories
 
-# gap -1, match +2, mismatch -2
-# TODO: return a string, of score, subtrajectory length
-def EDR(t1, t2):
+# gap -2, match +5, mismatch -3
+def EDR(t1, t2, mt, ms, gap):
 	m, n = len(t1), len(t2)
 	matcher = [[0 for x in range(n+1)] for y in range(m+1)]
 	backtrack = [[(-1,-1) for x in range(n+1)] for y in range(m+1)]
@@ -82,9 +68,9 @@ def EDR(t1, t2):
 	endposition = (0, 0)
 	for i in range(1, m+1):
 		for j in range(1, n+1):
-			gapAbove = matcher[i-1][j]-1
-			gapLeft = matcher[i][j-1]-1
-			matching = matcher[i-1][j-1] + (2 if match(t1[i-1],t2[j-1]) else -2)
+			gapAbove = matcher[i-1][j]+gap
+			gapLeft = matcher[i][j-1]+gap
+			matching = matcher[i-1][j-1] + (mt if match(t1[i-1],t2[j-1]) else ms)
 			score = max(0, max(gapAbove, gapLeft, matching)) # if negative, convert to 0
 			matcher[i][j] = score
 
@@ -104,11 +90,8 @@ def EDR(t1, t2):
 				endposition = (i, j)
 
 	tempi, tempj = endposition
-	# print("T1: index - " + str(tempi) + " Location - " + str((t1[tempi][0], t1[tempi][1])) + " Time - " + str(datetime.fromtimestamp(t1[tempi][2]).isoformat()) +  " T2: index - " + str(tempj) + " Location - " + str((t2[tempj][0], t2[tempj][1])) + " Time - " + str(datetime.fromtimestamp(t2[tempj][2]).isoformat()))
 	while backtrack[tempi][tempj] != (-1, -1):
 		tempi, tempj = backtrack[tempi][tempj]
-		# print("T1: index - " + str(tempi) + " Location - " + str((t1[tempi][0], t1[tempi][1])) + " Time - " + str(datetime.fromtimestamp(t1[tempi][2]).isoformat()) +  " T2: index - " + str(tempj) + " Location - " + str((t2[tempj][0], t2[tempj][1])) + " Time - " + str(datetime.fromtimestamp(t2[tempj][2]).isoformat()))
-
 
 	# calculate time duration of both subtrajectories
 	start1 = datetime.fromtimestamp(t1[tempi][2]).isoformat()
@@ -117,83 +100,64 @@ def EDR(t1, t2):
 	end2 =datetime.fromtimestamp(t2[endposition[1]-1][2]).isoformat()
 	timeduration1 = t1[endposition[0]-1][2] - t1[tempi][2] # in seconds
 	timeduration2 = t2[endposition[1]-1][2] - t2[tempj][2] # in seconds
-	# print("T1: First point:" + str(t1[0]) + " End Point:" + str(t1[-1]))
-	# print("T2: First point:" + str(t2[0]) + " End Point:" + str(t2[-1]))
+
 	return (maxscore, start1, end1, timeduration1, start2, end2, timeduration2)
 
-# gap -0, match +1, mismatch -1
-# def EDR(t1, t2):
-# 	m, n = len(t1), len(t2)
-# 	matcher = [[0 for x in range(n+1)] for y in range(m+1)]
-# 	backtrack = [[(-1,-1) for x in range(n+1)] for y in range(m+1)]
-# 	maxscore = 0
-# 	endposition = (0, 0)
-# 	for i in range(1, m+1):
-# 		for j in range(1, n+1):
-# 			gapAbove = matcher[i-1][j]
-# 			gapLeft = matcher[i][j-1]
-# 			matching = matcher[i-1][j-1] + (1 if match(t1[i-1],t2[j-1]) else -1)
-# 			score = max(0, max(gapAbove, gapLeft, matching)) # if negative, convert to 0
-# 			matcher[i][j] = score
-
-# 			# set backtrack table
-# 			if score == matching:
-# 				backtrack[i][j] = (i-1, j-1)
-# 			elif score == gapAbove:
-# 				backtrack[i][j] = (i-1, j)
-# 			elif score == gapLeft:
-# 				backtrack[i][j] = (i, j-1)
-# 			else:
-# 				backtrack[i][j] = (-1, -1)
-
-# 			# update maxscore
-# 			if score > maxscore:
-# 				maxscore = score
-# 				endposition = (i, j)
-
-# 	tempi, tempj = endposition
-# 	# print("T1: index - " + str(tempi-1) + " Location - " + str((t1[tempi-1][0], t1[tempi-1][1])) + " Time - " + str(datetime.fromtimestamp(t1[tempi-1][2]).isoformat()) +  " T2: index - " + str(tempj-1) + " Location - " + str((t2[tempj-1][0], t2[tempj-1][1])) + " Time - " + str(datetime.fromtimestamp(t2[tempj-1][2]).isoformat()))
-# 	while matcher[backtrack[tempi][tempj][0]][backtrack[tempi][tempj][1]] != 0:
-# 		tempi, tempj = backtrack[tempi][tempj]
-# 		# print("T1: index - " + str(tempi-1) + " Location - " + str((t1[tempi-1][0], t1[tempi-1][1])) + " Time - " + str(datetime.fromtimestamp(t1[tempi-1][2]).isoformat()) +  " T2: index - " + str(tempj-1) + " Location - " + str((t2[tempj-1][0], t2[tempj-1][1])) + " Time - " + str(datetime.fromtimestamp(t2[tempj-1][2]).isoformat()))
-
-
-# 	# calculate time duration of both subtrajectories
-# 	start1 = datetime.fromtimestamp(t1[tempi-1][2]).isoformat()
-# 	end1 =datetime.fromtimestamp(t1[endposition[0]-1][2]).isoformat()
-# 	start2 = datetime.fromtimestamp(t2[tempj-1][2]).isoformat()
-# 	end2 =datetime.fromtimestamp(t2[endposition[1]-1][2]).isoformat()
-# 	timeduration1 = t1[endposition[0]-1][2] - t1[tempi-1][2] # in seconds
-# 	timeduration2 = t2[endposition[1]-1][2] - t2[tempj-1][2] # in seconds
-# 	return (maxscore, start1, end1, timeduration1, start2, end2, timeduration2)
-
-def EDR_all(traj_dict, fileout, day):
+def EDR_all(traj_dict, fileout, day, mt, ms, gap):
 	trajectories = traj_dict[day]
-	with open (fileout, "w") as f:
-		matches = 0
-		for i in range(len(trajectories)-1):
-			for j in range(i+1, len(trajectories)-1):
-				score, start1, end1, duration1, start2, end2, duration2 = EDR(trajectories[i], trajectories[j])
-				line = "Score: " + str(score) + " Duration 1: " + str(duration1) + "s (from " + str(start1) + " to " + str(end1) + ") Duration 2: " + str(duration2) + "s (from " + str(start2) + " to " + str(end2) + ")\n"
-				print(line)
-				if score >= 60:
-					matches+=1
-					f.write(line)
-		f.write("Out of " + str(len(trajectories) * len(trajectories)) + " pairs there are " + str(matches) + " matches.\n")
+	duration_score_set = []
+	duration_score_set.append([])
+	duration_score_set.append([])
+	# with open (fileout, "w") as f:
+	for i in range(len(trajectories)-1):
+		for j in range(i+1, len(trajectories)-1):
+			score, start1, end1, duration1, start2, end2, duration2 = EDR(trajectories[i], trajectories[j], mt, ms, gap)
+			# line = "Score: " + str(score) + " Duration 1: " + str(duration1) + "s (from " + str(start1) + " to " + str(end1) + ") Duration 2: " + str(duration2) + "s (from " + str(start2) + " to " + str(end2) + ")\n"
+			# print(line)
+			# f.write(line)
+			duration_score_set[0].append(min(duration1, duration2))
+			duration_score_set[1].append(score)
+	return duration_score_set
 
-def wrapper(filein):
+def wrapper(filein, plotout, mt, ms, gap):
 	traj_dict = trajectory_by_day(filein)
-	# EDR_all(traj_dict, "../Result/Periodicity/000/Monday(1).csv",1)
-	EDR_all(traj_dict, "../Result/Periodicity/000/Tuesday(1).csv",2)
-	EDR_all(traj_dict, "../Result/Periodicity/000/Wednesday(1).csv",3)
-	EDR_all(traj_dict, "../Result/Periodicity/000/Thursday(1).csv",4)
-	EDR_all(traj_dict, "../Result/Periodicity/000/Friday(1).csv",5)
-	EDR_all(traj_dict, "../Result/Periodicity/000/Saturday(1).csv",6)
-	EDR_all(traj_dict, "../Result/Periodicity/000/Sunday(1).csv",7)
+	all_duration_score_set = []
+	all_duration_score_set.append([])
+	all_duration_score_set.append([])
+	monday = EDR_all(traj_dict, "../Result/Periodicity/000/Monday_532.csv",1, mt, ms, gap)
+	all_duration_score_set[0].extend(monday[0])
+	all_duration_score_set[1].extend(monday[1])
+	tuesday = EDR_all(traj_dict, "../Result/Periodicity/000/Tuesday_532.csv",2, mt, ms, gap)
+	all_duration_score_set[0].extend(tuesday[0])
+	all_duration_score_set[1].extend(tuesday[1])
+	wednesday = EDR_all(traj_dict, "../Result/Periodicity/000/Wednesday_532.csv",3, mt, ms, gap)
+	all_duration_score_set[0].extend(wednesday[0])
+	all_duration_score_set[1].extend(wednesday[1])
+	thursday = EDR_all(traj_dict, "../Result/Periodicity/000/Thursday_532.csv",4, mt, ms, gap)
+	all_duration_score_set[0].extend(thursday[0])
+	all_duration_score_set[1].extend(thursday[1])
+	friday = EDR_all(traj_dict, "../Result/Periodicity/000/Friday_532.csv",5, mt, ms, gap)
+	all_duration_score_set[0].extend(friday[0])
+	all_duration_score_set[1].extend(friday[1])
+	saturday = EDR_all(traj_dict, "../Result/Periodicity/000/Saturday_532.csv",6, mt, ms, gap)
+	all_duration_score_set[0].extend(saturday[0])
+	all_duration_score_set[1].extend(saturday[1])
+	sunday = EDR_all(traj_dict, "../Result/Periodicity/000/Sunday_532.csv",7, mt, ms, gap)
+	all_duration_score_set[0].extend(sunday[0])
+	all_duration_score_set[1].extend(sunday[1])
+
+	data = np.asarray(all_duration_score_set)
+	x,y = data
+	plt.scatter(x,y)
+	string = "Person " + str(filein[-7:-4]) + ", Score Scale(" + str(mt) + "," + str(ms) + "," + str(gap) + ")"
+	plt.title(string)
+	plt.xlabel('Duration')
+	plt.ylabel('Score')
+	plt.savefig(plotout)
 
 
 def main():
-	wrapper("../Data/DataByPerson/000.csv")
+	wrapper("../Data/DataByPerson/000.csv", "../Result/Periodicity/000/distribution532.png",5, -3, -2)
 	# traj_dict = trajectory_by_day("../Data/DataByPerson/000.csv")
 	# for key in traj_dict:
 	# 	print(key, len(traj_dict[key]))
@@ -204,6 +168,5 @@ def main():
 
 	
 if __name__ == "__main__":
-    main()
-
+	main()
 
