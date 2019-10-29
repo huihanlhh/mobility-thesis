@@ -108,15 +108,15 @@ def EDR_all(traj_dict, fileout, day, mt, ms, gap):
 	duration_score_set = []
 	duration_score_set.append([])
 	duration_score_set.append([])
-	# with open (fileout, "w") as f:
-	for i in range(len(trajectories)-1):
-		for j in range(i+1, len(trajectories)-1):
-			score, start1, end1, duration1, start2, end2, duration2 = EDR(trajectories[i], trajectories[j], mt, ms, gap)
-			# line = "Score: " + str(score) + " Duration 1: " + str(duration1) + "s (from " + str(start1) + " to " + str(end1) + ") Duration 2: " + str(duration2) + "s (from " + str(start2) + " to " + str(end2) + ")\n"
-			# print(line)
-			# f.write(line)
-			duration_score_set[0].append(min(duration1, duration2))
-			duration_score_set[1].append(score)
+	with open (fileout, "w") as f:
+		for i in range(len(trajectories)-1):
+			for j in range(i+1, len(trajectories)-1):
+				score, start1, end1, duration1, start2, end2, duration2 = EDR(trajectories[i], trajectories[j], mt, ms, gap)
+				line = "Score: " + str(score) + " Duration 1: " + str(duration1) + "s (from " + str(start1) + " to " + str(end1) + ") Duration 2: " + str(duration2) + "s (from " + str(start2) + " to " + str(end2) + ")\n"
+				print(line)
+				f.write(line)
+				duration_score_set[0].append(min(duration1, duration2))
+				duration_score_set[1].append(score)
 	return duration_score_set
 
 def wrapper(filein, plotout, mt, ms, gap):
@@ -124,25 +124,25 @@ def wrapper(filein, plotout, mt, ms, gap):
 	all_duration_score_set = []
 	all_duration_score_set.append([])
 	all_duration_score_set.append([])
-	monday = EDR_all(traj_dict, "../Result/Periodicity/000/Monday_532.csv",1, mt, ms, gap)
+	monday = EDR_all(traj_dict, "../Result/Periodicity/000/Monday_732.csv",1, mt, ms, gap)
 	all_duration_score_set[0].extend(monday[0])
 	all_duration_score_set[1].extend(monday[1])
-	tuesday = EDR_all(traj_dict, "../Result/Periodicity/000/Tuesday_532.csv",2, mt, ms, gap)
+	tuesday = EDR_all(traj_dict, "../Result/Periodicity/000/Tuesday_732.csv",2, mt, ms, gap)
 	all_duration_score_set[0].extend(tuesday[0])
 	all_duration_score_set[1].extend(tuesday[1])
-	wednesday = EDR_all(traj_dict, "../Result/Periodicity/000/Wednesday_532.csv",3, mt, ms, gap)
+	wednesday = EDR_all(traj_dict, "../Result/Periodicity/000/Wednesday_732.csv",3, mt, ms, gap)
 	all_duration_score_set[0].extend(wednesday[0])
 	all_duration_score_set[1].extend(wednesday[1])
-	thursday = EDR_all(traj_dict, "../Result/Periodicity/000/Thursday_532.csv",4, mt, ms, gap)
+	thursday = EDR_all(traj_dict, "../Result/Periodicity/000/Thursday_732.csv",4, mt, ms, gap)
 	all_duration_score_set[0].extend(thursday[0])
 	all_duration_score_set[1].extend(thursday[1])
-	friday = EDR_all(traj_dict, "../Result/Periodicity/000/Friday_532.csv",5, mt, ms, gap)
+	friday = EDR_all(traj_dict, "../Result/Periodicity/000/Friday_732.csv",5, mt, ms, gap)
 	all_duration_score_set[0].extend(friday[0])
 	all_duration_score_set[1].extend(friday[1])
-	saturday = EDR_all(traj_dict, "../Result/Periodicity/000/Saturday_532.csv",6, mt, ms, gap)
+	saturday = EDR_all(traj_dict, "../Result/Periodicity/000/Saturday_732.csv",6, mt, ms, gap)
 	all_duration_score_set[0].extend(saturday[0])
 	all_duration_score_set[1].extend(saturday[1])
-	sunday = EDR_all(traj_dict, "../Result/Periodicity/000/Sunday_532.csv",7, mt, ms, gap)
+	sunday = EDR_all(traj_dict, "../Result/Periodicity/000/Sunday_732.csv",7, mt, ms, gap)
 	all_duration_score_set[0].extend(sunday[0])
 	all_duration_score_set[1].extend(sunday[1])
 
@@ -157,7 +157,7 @@ def wrapper(filein, plotout, mt, ms, gap):
 
 
 def main():
-	wrapper("../Data/DataByPerson/000.csv", "../Result/Periodicity/000/distribution532.png",5, -3, -2)
+	wrapper("../Data/DataByPerson/000.csv", "../Result/Periodicity/000/distribution732.png",7, -3, -2)
 	# traj_dict = trajectory_by_day("../Data/DataByPerson/000.csv")
 	# for key in traj_dict:
 	# 	print(key, len(traj_dict[key]))
